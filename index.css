@@ -1,0 +1,94 @@
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+html, body {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+header {
+    background-image: url(./images/pattern-bg.png);
+    background-size: 100%;
+    width: 100%;
+    background-repeat: none;
+    height: 40vh;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 40%;
+    border: inherit;
+    cursor: inherit;
+    border-start-start-radius: 10px;
+    border-end-start-radius: 10px;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    border: inherit;
+    cursor: inherit;
+    border-end-end-radius: 10px;
+    border-start-end-radius: 10px;
+    width: 2rem;
+}
+
+main {
+    background-color: yellow;
+    height: 60vh;
+}
+
+
+
+.container {
+    position: relative;
+    bottom: 4rem;
+    width: 80%;
+    margin: auto;
+    height: 7rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    grid-template-areas: 1fr / repeat(4, 1fr);
+}
+
+.ip { 
+    background-color: saddlebrown;
+}
+
+/* @media only screen and (max-width: 375px) {
+
+} */
+
+/* 
+- Mobile: 375px
+- Desktop: 1440px */
