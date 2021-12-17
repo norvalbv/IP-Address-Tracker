@@ -29,6 +29,7 @@ h1 {
     color: #fff;
     font-size: 1.5rem;
     padding: 1.5rem;
+    font-weight: 500;
 }
 
 .inputContainer {
@@ -45,7 +46,8 @@ input[type="text"] {
     cursor: inherit;
     border-start-start-radius: 10px;
     border-end-start-radius: 10px;
-    text-align: center;
+    padding: 0 1rem;
+    font-size: 0.9rem;
 }
 
 input[type="text"]:focus {
@@ -62,27 +64,45 @@ button {
     width: 2rem;
 }
 
+button:hover {
+    background-color: var(--very-dark-gray);
+}
+
 main {
     background-color: yellow;
     height: 60vh;
 }
 
-
-
 .container {
     position: relative;
     bottom: 4rem;
-    width: 80%;
+    width: 75%;
     margin: auto;
     height: 7rem;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 1rem;
-    padding: 1rem;
-    grid-template-areas: 1fr / repeat(4, 1fr);
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.ip { 
-    background-color: saddlebrown;
+.inner {
+    flex: 1;
+}
+
+h2 {
+    font-size: 0.65rem;
+    color: var(--dark-gray);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--very-dark-gray);
+}
+
+.location, .timezone, .isp { 
+    border-left: 1px solid var(--dark-gray);
 }
 
 /* @media only screen and (max-width: 375px) {

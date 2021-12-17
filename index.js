@@ -1,5 +1,3 @@
-let api_key = 'at_baufPaDiDCELtm7xL1PSucMWS46Ob';
-
 let ipInput = null;
 let valid = true;
 
@@ -44,7 +42,6 @@ async function getData () {
 };
 
 const updatesPage = data => {
-    ipDisplay.innerHTML = data;
     if (valid) {
         ipDisplay.innerHTML = data.ip;
         ispDisplay.innerHTML = data.isp;
