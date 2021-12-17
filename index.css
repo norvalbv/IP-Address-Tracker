@@ -69,17 +69,18 @@ button:hover {
 }
 
 main {
-    background-color: yellow;
     height: 60vh;
+    position: relative;
+    width: 100%;
 }
 
 .container {
-    position: relative;
-    bottom: 4rem;
+    position: absolute;
     width: 75%;
+    inset: 0 0 20rem 0;
     margin: auto;
-    height: 7rem;
-    background-color: rgb(255, 255, 255);
+    height: 5rem;
+    background-color: #fff;
     border-radius: 1rem;
     padding: 2rem 1rem;
     display: flex;
@@ -103,6 +104,11 @@ p {
 
 .location, .timezone, .isp { 
     border-left: 1px solid var(--dark-gray);
+}
+
+#map { 
+    height: 100%;
+    z-index: -1;
 }
 
 /* @media only screen and (max-width: 375px) {
