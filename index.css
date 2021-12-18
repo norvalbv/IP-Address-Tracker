@@ -41,7 +41,7 @@ h1 {
 }
 
 input[type="text"] {
-    width: 40%;
+    width: 50%;
     border: inherit;
     cursor: inherit;
     border-start-start-radius: 10px;
@@ -118,10 +118,26 @@ p {
     z-index: 0;
 }
 
-/* @media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        gap: 1rem;
+        height: 14rem;
+    }
 
-} */
+    .location, .timezone, .isp { 
+        border-left: none;
+        border-top: 1px solid var(--dark-gray);
+        padding: 0.5rem 0;
+    }
 
-/* 
-- Mobile: 375px
-- Desktop: 1440px */
+    input[type="text"] {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    input[type="text"] {
+        font-size: 0.75rem;
+    }
+}
