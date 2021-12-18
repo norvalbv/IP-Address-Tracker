@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
   crossorigin=""/>
@@ -23,9 +22,10 @@
     <header>
       <h1>IP Address Tracker</h1>
       <div class="inputContainer">
-        <input type="text" placeholder="Search for any IP address or domain">
+        <input type="text" placeholder="Search for any IP address or domain" minlength="7" maxlength="30">
         <button>></button>
       </div>
+      <p id="errorDisplay"></p>
     </header>
     <main>
       <div class="container">

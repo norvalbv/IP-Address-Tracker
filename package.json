@@ -1,0 +1,26 @@
+{
+  "name": "ip-address-tracker-master",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/norvalbv/IP-Address-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/norvalbv/IP-Address-Tracker/issues"
+  },
+  "homepage": "https://github.com/norvalbv/IP-Address-Tracker#readme",
+  "dependencies": {
+    "mocha": "^9.1.3"
+  }
+}
