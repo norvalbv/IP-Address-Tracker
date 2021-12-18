@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/norvalbv/IP-Address-Tracker#readme",
   "dependencies": {
+    "browserify": "^17.0.0",
+    "dotenv": "^10.0.0",
     "mocha": "^9.1.3"
   }
 }
