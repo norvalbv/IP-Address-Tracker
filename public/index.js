@@ -1,3 +1,7 @@
+require('dotenv').config();
+
+console.log(process.env);
+
 const errorDisplay = document.getElementById('errorDisplay');
 let ipInput = '';
 let valid = false;
