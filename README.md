@@ -10,7 +10,7 @@ You can also open up your own live server to run the project / run the command n
 
 Screenshot:
 
-![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)
+![Desktop design for project]](./design/desktop-preview.jpg)
 
 Roadmap (Note: This roadmap is to outline what I have learnt and how I have implemented the learning into the project) :
 
