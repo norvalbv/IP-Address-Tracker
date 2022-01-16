@@ -7,7 +7,6 @@ const locationDisplay = document.getElementById("locationInfo");
 const timezoneDisplay = document.getElementById("timezoneInfo");
 const ispDisplay = document.getElementById("ispInfo");
 
-
 // Gets input
 
 let input = document.querySelector("input");
@@ -15,10 +14,9 @@ input.addEventListener("input", function () {
   ipInput = input.value;
 });
 
-// gets typed in data
+// checks if input is valid
 
-let button = document.querySelector("button");
-button.addEventListener("click", function () {
+export const checkValid = () => {
   if (ipInput.length > 6 && ipInput.length < 100) {
     valid = true;
     errorDisplay.innerHTML = null;
@@ -27,8 +25,15 @@ button.addEventListener("click", function () {
     console.log("Please enter a valid input");
     errorDisplay.innerHTML = "Please enter a valid input";
   }
-});
+}
 
+
+// Grabs submit button
+
+let button = document.querySelector("button");
+button.addEventListener("click", checkValid);
+
+// inserts map
 
 let map = L.map("map").setView([0, 0], 15);
 
@@ -67,9 +72,7 @@ let userIP;
 
 async function getData(params) {
   try {
-    const response = await fetch(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=at_baufPaDiDCELtm7xL1PSucMWS46Ob&ipAddress=${params}`
-    );
+    const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_baufPaDiDCELtm7xL1PSucMWS46Ob&ipAddress=${params}`);
     if (response.ok) {
       const data = await response.json();
       map.panTo(new L.LatLng(data.location.lat, data.location.lng), 15);
