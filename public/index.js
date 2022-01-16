@@ -1,13 +1,12 @@
 const errorDisplay = document.getElementById("errorDisplay");
-let ipInput = "";
-let valid = false;
-
 const ipDisplay = document.getElementById("ipInfo");
 const locationDisplay = document.getElementById("locationInfo");
 const timezoneDisplay = document.getElementById("timezoneInfo");
 const ispDisplay = document.getElementById("ispInfo");
 
 // Gets input
+
+let ipInput = "";
 
 let input = document.querySelector("input");
 input.addEventListener("input", function () {
@@ -18,15 +17,13 @@ input.addEventListener("input", function () {
 
 export const checkValid = () => {
   if (ipInput.length > 6 && ipInput.length < 100) {
-    valid = true;
     errorDisplay.innerHTML = null;
     getData(ipInput);
   } else {
     console.log("Please enter a valid input");
     errorDisplay.innerHTML = "Please enter a valid input";
   }
-}
-
+};
 
 // Grabs submit button
 
@@ -53,20 +50,17 @@ L.tileLayer(
 
 // GET USER IP
 
-let userIP;
-
 (async () => {
+  let userIP;
     try {
     const response = await fetch('https://api.db-ip.com/v2/free/self');
     const data = await response.json();
     userIP = data;
-    valid = true;
     getData(userIP.ipAddress);
   } catch (err) {
     console.error(err);
   }
 })();
-
 
 // gets data and pans to location from typed in IP
 
@@ -81,12 +75,12 @@ async function getData(params) {
   } catch (err) {
     console.log(err);
   }
-}
+};
 
 // Updates homepage info
 
-const updatesPage = (data) => {
-  if (valid) {
+const updatesPage = data => {
+  if (data) {
     ipDisplay.innerHTML = data.ip;
     ispDisplay.innerHTML = data.isp;
     locationDisplay.innerHTML = `${data.location.city} - ${data.location.region} - ${data.location.country}`;
