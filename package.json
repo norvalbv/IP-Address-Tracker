@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "serve -s build",
     "test": "jest --coverage",
     "devStart": "nodemon server.js"
   },
@@ -30,7 +30,8 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "serve": "^13.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
