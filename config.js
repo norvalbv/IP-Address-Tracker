@@ -1,9 +1,12 @@
 const dotenv = require('dotenv');
 const result = dotenv.config();
 
-if (result.error) {
-    throw result.error;
-}
+// if (result.error) {
+//     throw result.error;
+// }
+
+// The above code statement causes an error when uploading to Heroku
+// because it can't detect the .env file (which was purposely gitignored).
 
 module.exports = {
     stage: process.env.NODE_ENV,
