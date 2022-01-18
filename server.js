@@ -9,7 +9,7 @@ if (result.error) {
 
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+app.use('/', serveStatic(path.join(__dirname, '/public')));
 
 app.listen(PORT, () => {
     console.log(`App is listening on ${PORT}.`);
