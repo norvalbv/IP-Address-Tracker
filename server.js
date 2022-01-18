@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const result = dotenv.config();
+const path = require('path')
 
 // if (result.error) {
 //     throw result.error;
