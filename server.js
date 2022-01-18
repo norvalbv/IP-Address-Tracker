@@ -9,7 +9,7 @@ const result = dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 
-app.use('/', serveStatic(path.join(__dirname, '/public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
     console.log(`App is listening on ${PORT}.`);
